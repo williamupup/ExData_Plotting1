@@ -4,7 +4,7 @@ subsetted <- read.table(text = grep("^[1,2]/2/2007",readLines(files),value=TRUE)
 
 
 #Plot2
-combinetime <- strptime(paste(subsetted$Date, subsetted$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
+datetime <- strptime(paste(subsetted$Date, subsetted$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 png("Plot2.png", width = 480, height = 480)
-plot(combinetime, subsetted$Global_active_power, xlab = " ", ylab = "Global Active Power (killowatts)", type = "l")
+plot(datetime, subsetted$Global_active_power, xlab = " ", ylab = "Global Active Power (killowatts)", type = "l")
 dev.off()
