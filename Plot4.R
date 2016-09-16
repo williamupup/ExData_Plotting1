@@ -4,3 +4,4 @@ subsetted <- read.table(text = grep("^[1,2]/2/2007",readLines(files),value=TRUE)
 
 #Plot4
 combinetime <- strptime(paste(subsetted$Date, subsetted$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
+plot(combinetime, subsetted$Global_active_power, xlab = " ", ylab = "Global Active Power (killowatts)", type = "l")
